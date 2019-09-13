@@ -58,6 +58,9 @@ for x in f1:
 #    mylist.append(client_p(int(datarow[0]),datarow[1]))
 newfile.close()
 
+#TODO - Add the input code here as a loop
+
+
 print (professions)
 for x in mylist:
     print(x)
