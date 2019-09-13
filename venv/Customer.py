@@ -4,8 +4,12 @@ class Customer:
     lname = ""
     isblacklisted = 0;
 
-    def __init__(self):
-        self.title = ""
+    def __init__(self,last,first,bl):
+        self.lname = last
+        str = first.index(".") + 1
+        self.title = first[0:str]
+        self.isblacklisted = bl
+        self.fname = first[len(self.title):len(first) - 1]
 
     def __str__(self):
         return "Title:" + self.title + " First Name:" + self.fname + " Last Name:" + self.lname + " Blacklisted:" + self.isblacklisted
@@ -34,7 +38,14 @@ class Customer:
     def getLname(self):
         return self.lname
 
-
+class Order:
+    productname=""
+    productcode=0
+    def __init__(self,product, code):
+        self.productcode = code
+        self.productname = product
+    def __str__(self):
+        return self.productname + ", " + str(self.productcode)
 
 # customer1 = Customer()
 # customer1.setTitle("Mr.")

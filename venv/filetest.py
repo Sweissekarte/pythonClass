@@ -55,15 +55,21 @@ for x in f1:
     else:
         professions[role] = str(age) + "," + str(age)
 
-#    mylist.append(client_p(int(datarow[0]),datarow[1]))
 newfile.close()
 
-#TODO - Add the input code here as a loop
-
-
-print (professions)
-for x in mylist:
-    print(x)
+successmsg = ""
+while role != "END":
+    clientstr = input("Enter your profession, age (Enter END to exit) to check eligibility: ")
+    clientdata = clientstr.split(",") if "," in clientstr else [clientstr,0]
+    role, age = clientdata[0],int(clientdata[1])
+    Eligible = False
+    for row in mylist:
+        if role.lower() in row.profession.lower():
+            if row.minage <= age <= row.maxage:
+                Eligible = True
+            break
+    successmsg = "Have a nice day - exiting" if role =="END" else "You are Eligible !!" if Eligible else "You are not Eligible."
+    print(successmsg)
 #mylist.append(client_p(int(datarow[0]),datarow[1]))
 
 # nums= set([11,2,3,3,3,4,4])
