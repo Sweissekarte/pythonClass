@@ -18,3 +18,5 @@ a=[100,110,130]
 b=[(-1,5)]
 print(sum(a))
 print(math.atan2(-1,2))
+
+print (math.factorial(8))
