@@ -1,4 +1,13 @@
 import math
+import numpy as np
+import pandas
+# original_array = [1,2,3]
+# a = np.array([[1,2,5],[3,4,5]])
+#arr = np.loadtxt('FairDealCustomerData.csv', delimiter=',',dtype='object')
+#print (arr)
+#arr_slice = slice(5,12,2)
+#print(arr[arr_slice])
+#print(original_array)
 #
 # coords = input("enter moves comma list UP,DOWN,LEFT,RIGHT: ")
 #
@@ -75,11 +84,11 @@ import math
 #
 # print('Lower: ',lower,'\nUpper: ',upper)
 
-x= input("Enter binary number list: ")
-c = x.split(",")
-b=[]
-for i in c:
-    if (int(i)%5 == 0):
-        b.append(i)
-
-print(b)
+# x= input("Enter binary number list: ")
+# c = x.split(",")
+# b=[]
+# for i in c:
+#     if (int(i)%5 == 0):
+#         b.append(i)
+#
+# print(b)
